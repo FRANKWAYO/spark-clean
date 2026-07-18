@@ -530,18 +530,13 @@
 <script>
 (function(){
   // ---------------- API config ----------------
-  const API_BASE = '/api';
+  const API_BASE = 'https://spark-clean.onrender.com/api';
   const WHATSAPP_NUMBER = '0535820190';
   // Dev-only: automatically enable mock API responses when the site is served
   // from GitHub Pages (static host). This prevents form POSTs from failing
   // because GitHub Pages cannot run the Node API. Locally and on a real API
   // host the mock remains disabled.
-  const DEV_MOCK = (function(){
-    try{
-      if(location.hostname && location.hostname.endsWith('github.io')) return true;
-    }catch(e){}
-    return false;
-  })();
+  const DEV_MOCK = false;
 
   async function apiPost(path, data){
     // If DEV_MOCK is enabled, simulate a successful API response locally

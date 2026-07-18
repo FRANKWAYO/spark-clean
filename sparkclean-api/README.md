@@ -17,7 +17,7 @@ npm run dev        # auto-restarts on changes (nodemon)
 Server runs on `http://localhost:5000` by default. Check it's alive:
 
 ```bash
-curl http://localhost:5000/api/health
+curl http://:5000/api/health
 ```
 
 ## 2. Email notifications
